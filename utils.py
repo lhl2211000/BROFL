@@ -78,12 +78,12 @@ def reconstruction_loss(num_channels, x, x_recon):
     batch_size = x.size(0)
     assert batch_size != 0
 
-    # Use w/one-channel images 一通道
+    # Use w/one-channel images 
     if num_channels == 1:
         recon_loss = F.binary_cross_entropy_with_logits(
             x_recon, x, reduction="sum"
         ).div(batch_size)
-    # Multi-channel images 三通道
+    # Multi-channel images 
     elif num_channels == 3:
         x_recon = torch.sigmoid(x_recon)
         recon_loss = F.mse_loss(x_recon, x, reduction="sum").div(batch_size)
