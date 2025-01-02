@@ -22,6 +22,6 @@ Change to `--dataset fashion` to use FashionMNIST.
 Chage to `--dataset svhn` to use SVHN.
 
 ```
-python main.py --algorithm fedcvaeens --dataset mnist --num_users 50 --alpha 0.001 --local_epochs 15 --should_log 1 --z_dim 10 --beta 1.0 --classifier_num_train_samples 1000 --classifier_epochs 10 --uniform_range "(-1.0, 1.0)" --use_adam 1       
+python main.py --algorithm fedcvaeens --dataset mnist --num_users 50 --local_LR 0.001 --fuzzy_v 0.7 --meta_beta 0.7 --alpha 0.001 --inner_loop 3 --local_epochs 15 --should_log 1 --z_dim 10 --beta 1.0 --classifier_num_train_samples 5000 --classifier_epochs 10 --uniform_range "(-3.0, 3.0)" --use_adam 1       
 ```
 
