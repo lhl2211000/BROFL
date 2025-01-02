@@ -137,34 +137,7 @@ class Data:
                 split="test",
                 transform=transform_list,
             )
-        elif self.dataset_name == "cifar10":
-            self.num_channels = 3
-            self.num_classes = 10
-            self.image_size = 32
-
-            transform_list = []
-
-            # Establishing transforms
-            transform_list.append(ToTensor())
-            transform_list.append(Resize(32))  # Everyone gets resized to 32
-            if normalize:
-                transform_list.append(Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)))
-
-            transform_list = Compose(transform_list)
-
-            dataset_train = CIFAR10(
-                root="data/cifar10",
-                download=True,
-                train=True,
-                transform=transform_list,
-            )
-
-            dataset_test = CIFAR10(
-                root="data/cifar10",
-                download=True,
-                train=False,
-                transform=transform_list,
-            )
+        
         else:
             raise NotImplementedError(
                 f"Dataset '{dataset_name}' has not been implemented, please choose either mnist, fashion, svhn, or cifar10"
