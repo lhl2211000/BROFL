@@ -21,4 +21,7 @@ The datasets available for benchmarking are [MNIST](http://yann.lecun.com/exdb/m
 Change to `--dataset fashion` to use FashionMNIST. 
 Chage to `--dataset svhn` to use SVHN.
 
+```
+python main.py --algorithm fedcvaeens --dataset mnist --num_users 50 --alpha 0.001 --local_epochs 15 --should_log 1 --z_dim 10 --beta 1.0 --classifier_num_train_samples 1000 --classifier_epochs 10 --uniform_range "(-1.0, 1.0)" --use_adam 1       
+```
 
