@@ -274,13 +274,13 @@ if __name__ == "__main__":
         "--meta_beta",
         type=float,
         default=0.7,
-        help="控制元任务损失中两项损失权重，beta是ssim损失 应该是 0.7 0.8",
+        help="weight in meta-task loss",
     )
     parser.add_argument(
         "--inner_loop",
         type=float,
         default=3,
-        help="元学习中内循环次数",
+        help="meta-learning loops",
     )
 
     # Command line arguments for specific models----------------------------------
