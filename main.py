@@ -122,14 +122,6 @@ def run_job(args,log):
 
         if args.algorithm == "fedavg":
             s = ServerFedAvg(default_params)
-        elif args.algorithm == "oneshot":
-            s = ServerOneShot(
-                default_params,
-                args.one_shot_sampling,
-                args.user_data_split,
-                args.K,
-                args.should_initialize_same_exp,
-            )
         elif args.algorithm == "fedcvaeens":
             s = ServerFedCVAEEns(
                 default_params,
@@ -148,26 +140,7 @@ def run_job(args,log):
                 args.inner_loop,
                 log,
             )
-        elif args.algorithm == "fedcvaekd":
-            s = ServerFedCVAEKD(
-                default_params,
-                args.z_dim,
-                d.image_size,
-                args.beta,
-                args.classifier_num_train_samples,
-                args.classifier_epochs,
-                args.decoder_num_train_samples,
-                args.decoder_epochs,
-                args.decoder_LR,
-                args.uniform_range,
-                args.should_weight_exp,
-                args.should_initialize_same_exp,
-                args.should_avg_exp,
-                args.should_fine_tune_exp,
-                args.heterogeneous_models_exp,
-                args.transform_exp,
-                args.trial
-            )
+       
         else:
             raise NotImplementedError(
                 "The specified algorithm has not been implemented."
