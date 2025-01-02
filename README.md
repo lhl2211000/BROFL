@@ -7,7 +7,7 @@ One-shot federated learning (OFL) is a promising learning paradigm that enables 
 2. `pip`
 
 ### Set up
-Install Python 3.9 and `pip`. We recommend using the package pyenv, which is described in [this](https://realpython.com/intro-to-pyenv/) article.
+Install Python 3.9 and `pip`. 
 Create and enter a new virtual environment and run:
 ```
 pip3 install -r requirements.txt
