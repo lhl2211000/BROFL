@@ -16,7 +16,7 @@ This will install the necessary dependencies.
 
 ### Algorithms
 
-The datasets available for benchmarking are [MNIST](http://yann.lecun.com/exdb/mnist/), [FashionMNIST](https://github.com/zalandoresearch/fashion-mnist), and [SVHN](http://ufldl.stanford.edu/housenumbers/). All examples below use MNIST.
+The datasets available for benchmarking are [MNIST](http://yann.lecun.com/exdb/mnist/), [FashionMNIST](https://github.com/zalandoresearch/fashion-mnist), and [SVHN](http://ufldl.stanford.edu/housenumbers/).
 
 Change to `--dataset fashion` to use FashionMNIST. 
 Chage to `--dataset svhn` to use SVHN.
